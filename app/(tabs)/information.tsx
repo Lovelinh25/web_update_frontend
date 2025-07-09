@@ -3,25 +3,21 @@ import { ExternalLink } from "@/components/ExternalLink";
 import ParallaxScrollView from "@/components/ParallaxScrollView";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
-import { IconSymbol } from "@/components/ui/IconSymbol";
 import React from "react";
 import { Image, Platform, StyleSheet } from "react-native";
 
 
-export default function TabThreeScreen(){
-    return(
-<ParallaxScrollView
+export default function TabThreeScreen() {
+  return (
+    <ParallaxScrollView
       headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
       headerImage={
-        <IconSymbol
-          size={310}
-          color="#808080"
-          name="chevron.left.forwardslash.chevron.right"
+        <Image source={require('@/assets/images/animal-logos-logofx-1-1200x675.jpeg')}
           style={styles.headerImage}
-        />
+          resizeMode="contain" />
       }>
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Explore</ThemedText>
+        <ThemedText type="title">Information</ThemedText>
       </ThemedView>
       <ThemedText>This app includes example code to help you get started.</ThemedText>
       <Collapsible title="File-based routing">
@@ -93,7 +89,7 @@ export default function TabThreeScreen(){
         })}
       </Collapsible>
     </ParallaxScrollView>
-    );
+  );
 }
 
 const styles = StyleSheet.create({
